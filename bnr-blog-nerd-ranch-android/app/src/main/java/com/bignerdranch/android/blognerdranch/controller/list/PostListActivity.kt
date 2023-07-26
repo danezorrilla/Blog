@@ -4,22 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bignerdranch.android.blognerdranch.BlogService
 import com.bignerdranch.android.blognerdranch.model.PostMetadata
 import com.bignerdranch.android.blognerdranch.R
 import com.bignerdranch.android.blognerdranch.viewmodel.PostViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class PostListActivity : AppCompatActivity() {
 
     private var postRecyclerView: RecyclerView? = null
+
     private lateinit var postViewModel: PostViewModel
     private lateinit var postObserver: Observer<List<PostMetadata>>
 

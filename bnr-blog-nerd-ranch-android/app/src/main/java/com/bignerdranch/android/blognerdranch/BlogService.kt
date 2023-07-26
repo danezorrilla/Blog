@@ -19,8 +19,6 @@ interface BlogService {
     @GET("post/{id}")
     suspend fun getPost(@Path("id") id: Int): Response<Post>
 
-    @GET("post/{id}")
-    suspend fun getPostPage(@Path("id") id: Int): Response<PostResponse>
 
     @GET("post/{id}")
     fun getPostID(@Path("id") id: Int): Call<Post>
